@@ -57,6 +57,6 @@ export const addUserHandler = function(){
 export const editUserHandler = function(){
   return instance({
     method:'put',
-    url:'/user/user/33'
+    url:`/user/user/${data.uid}`
   })
 }

@@ -44,3 +44,19 @@ export const getUserTagHandler = function() {
     url: '/user/label/0'
   })
 }
+
+//添加用户
+export const addUserHandler = function(){
+  return instance({
+    method:'psot',
+    url:'/user/user'
+  })
+}
+
+//编辑用户
+export const editUserHandler = function(){
+  return instance({
+    method:'put',
+    url:'/user/user/33'
+  })
+}

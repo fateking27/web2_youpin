@@ -51,7 +51,8 @@
                    placeholder="请选择">
           <el-option v-for="item in userLevelList"
                      :label="item.name"
-                     :value="item.id">
+                     :value="item.id"
+                     :key="item.id">
           </el-option>
         </el-select>
       </el-form-item>
@@ -61,7 +62,8 @@
                    placeholder="请选择">
           <el-option v-for="item in userGroupList"
                      :label="item.group_name"
-                     :value="item.id">
+                     :value="item.id"
+                     :key="item.id">
           </el-option>
         </el-select>
       </el-form-item>
@@ -78,7 +80,8 @@
                  width="70%">
 
         <div class='item'
-             v-for='item in userTagList'>
+             v-for='item in userTagList'
+             :key="item.id">
           <h3>{{item.name}}</h3>
           <el-tag v-for='subitem in item.label'
                   :type="subitem.isSelected?'':'info'"
@@ -201,8 +204,8 @@ export default {
         return v
       })
       console.log(this.userTagList);
-      // this.userGroupList = res.data.data.list
-      // this.addUserForm.group_id = this.userGroupList[0].id
+      this.userGroupList = res.data.data.list
+      this.addUserForm.group_id = this.userGroupList[0].id
     }
   }
 }

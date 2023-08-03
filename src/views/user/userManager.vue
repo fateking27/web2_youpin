@@ -95,7 +95,7 @@
                          label="操作"
                          width="100">
           <!-- 使用了自定义列模板，方便后期数据的获取 -->
-          <template slot-scope="scope">
+          <template slot-scope="">
             <el-button type="text"
                        size="small">编辑</el-button>
             <el-dropdown>
